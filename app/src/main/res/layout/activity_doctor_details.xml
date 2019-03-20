@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorDetailsActivity"
+    android:background="@color/colorWhite">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/idToolbarDoctorDetails"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_principal"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/toolbarTitleDoctorDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/TextDoctorDetails"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite">
+        </android.support.v7.widget.AppCompatTextView>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/idScrollViewDoctorDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/idToolbarDoctorDetails">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/idLinearLayoutDoctorDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/idScrollViewDoctorDetails"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/doctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Name Doctor"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/doctorSpeciality"
+                app:layout_constraintStart_toEndOf="@+id/doctorImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ImageView
+                android:id="@+id/doctorImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/bell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/doctorSpeciality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Doctor Speciality"
+                android:textColor="@color/colorGreenText"
+                android:textSize="19sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewStar"
+                app:layout_constraintStart_toEndOf="@+id/doctorImage"
+                app:layout_constraintTop_toBottomOf="@+id/doctorName" />
+
+            <ImageView
+                android:id="@+id/imageViewStar"
+                android:layout_width="34dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/doctorImage"
+                app:layout_constraintTop_toBottomOf="@+id/doctorSpeciality"
+                app:srcCompat="@drawable/star" />
+
+            <ImageView
+                android:id="@+id/imageViewStar2"
+                android:layout_width="34dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStar"
+                app:layout_constraintTop_toBottomOf="@+id/doctorSpeciality"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/star" />
+
+            <ImageView
+                android:id="@+id/imageViewStar3"
+                android:layout_width="34dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStar2"
+                app:layout_constraintTop_toBottomOf="@+id/doctorSpeciality"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/star" />
+
+            <ImageView
+                android:id="@+id/imageViewStar4"
+                android:layout_width="34dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewStar5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStar3"
+                app:layout_constraintTop_toBottomOf="@+id/doctorSpeciality"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/star" />
+
+            <ImageView
+                android:id="@+id/imageViewStar5"
+                android:layout_width="34dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStar4"
+                app:layout_constraintTop_toBottomOf="@+id/doctorSpeciality"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/doctorRating"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="85dp"
+                android:text="4.9"
+                android:textSize="19sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStar5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/idShortDescription"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/TextWelcomePage"
+                app:layout_constraintBottom_toTopOf="@+id/idTextLocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewShortDescription" />
+
+            <TextView
+                android:id="@+id/textViewShortDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="231dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/TextShortDescription"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/idShortDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewStar"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/idTextLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="285dp"
+                android:text="@string/TextLocation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idShortDescription" />
+
+            <ImageView
+                android:id="@+id/idDoctorAddressImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/address"
+                app:layout_constraintBottom_toTopOf="@+id/idMapDetails"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idTextLocation"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/idDoctorAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="15dp"
+                android:text="asd"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toTopOf="@+id/idMapDetails"
+                app:layout_constraintStart_toEndOf="@+id/idDoctorAddressImageView"
+                app:layout_constraintTop_toBottomOf="@+id/idTextLocation"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/idMapDetails"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/mapdetail"
+                app:layout_constraintBottom_toTopOf="@+id/buttonRequestDoctorDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idDoctorAddressImageView"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--<Fragment-->
+                <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:tools="http://schemas.android.com/tools"-->
+                <!--android:id="@+id/map"-->
+                <!--class="com.google.android.gms.maps.SupportMapFragment"-->
+                <!--android:name="com.example.rayca.my_application_lab_5.DoctorDetailsActivity"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--app:layout_constraintBottom_toTopOf="@+id/buttonRequestDoctorDetails"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintHorizontal_bias="0.0"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/idDoctorAddressImageView"-->
+                <!--app:layout_constraintVertical_bias="0.0"-->
+                <!--tools:context=".DoctorDetailsActivity" />-->
+
+            <Button
+                android:id="@+id/buttonRequestDoctorDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/next_button_rounded"
+                android:text="@string/TextRequest"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhiteText"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idMapDetails" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/containerBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeActivity">
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:itemBackground="@color/colorWhite"
+            app:itemIconTint="@color/colorPrimaryDark"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:menu="@menu/navigation"
+            app:labelVisibilityMode="labeled"
+            />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--<include-->
+        <!--android:id="@+id/navigation"-->
+        <!--layout="@layout/element_bottom_navigation"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginTop="600dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+</android.support.constraint.ConstraintLayout>
